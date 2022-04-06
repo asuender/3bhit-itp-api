@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: webuntis
+Version: 0.1.12
+Summary: Bindings for WebUntis API
+Home-page: https://github.com/python-webuntis/python-webuntis
+Author: Markus Unterwaditzer
+Author-email: markus@unterwaditzer.net
+License: new-style BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/x-rst
+Requires-Dist: requests
+
+===============================================================================================================
+This project is now maintained again. It was originally written by `untitaker <https://github.com/untitaker>`_
+===============================================================================================================
+
+===============
+python-webuntis
+===============
+
+.. image:: https://travis-ci.org/maphy-psd/python-webuntis.png?branch=master
+    :target: https://travis-ci.org/github/AugustH/python-webuntis
+
+
+.. image:: https://coveralls.io/repos/github/AugustH/python-webuntis/badge.svg?branch=master
+     :target: https://coveralls.io/github/AugustH/python-webuntis?branch=master
+
+Bindings for WebUntis API
+=========================
+
+::
+
+    import webuntis
+
+    s = webuntis.Session(
+        username='api',
+        password='api',
+        server='webuntis.grupet.at:8080',
+        school='demo_inf',
+        useragent='WebUntis Test'
+    ).login()
+
+    for klasse in s.klassen():
+        print(klasse.name)
+
+
+`read more... <http://python-webuntis.readthedocs.org/en/latest/>`_
+
+Installation
+============
+
+::
+
+    pip install webuntis
+
+License
+=======
+
+``python-webuntis`` is released under the 3-clause BSD license, see ``LICENSE``
+for details.
+
+
