@@ -3,11 +3,10 @@ import webuntis
 
 app = Flask(__name__)
 
-
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["POST"])
 def login():
-    username = request.args.get("username")
-    password = request.args.get("password")
+    username = request.form.get("username")
+    password = request.form.get("password")
 
     untis = webuntis.Session(
         username=username,
